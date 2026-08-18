@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+  }
+
+  #root {
+    min-height: 100dvh;
+    width: 100%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+
+/* Neon glow utilities */
+.neon-glow-cyan {
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}
+.neon-glow-magenta {
+  text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 40px #ff00aa;
+}
+.neon-glow-gold {
+  text-shadow: 0 0 10px #c9a84c, 0 0 20px #c9a84c, 0 0 40px #c9a84c;
+}
+.neon-glow-violet {
+  text-shadow: 0 0 10px #b24bff, 0 0 20px #b24bff, 0 0 40px #b24bff;
+}
+.neon-glow-blue {
+  text-shadow: 0 0 10px #7eb8ff, 0 0 20px #7eb8ff, 0 0 40px #7eb8ff;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-8deg); }
+  20% { transform: rotate(8deg); }
+  30% { transform: rotate(-6deg); }
+  40% { transform: rotate(6deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(4deg); }
+  70% { transform: rotate(-2deg); }
+  80% { transform: rotate(2deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.8s ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* AdSense placeholder */
+.adsense-placeholder {
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 12px;
+  min-height: 100px;
+}
