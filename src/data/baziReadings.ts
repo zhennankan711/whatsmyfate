@@ -54,7 +54,7 @@ const DAY_GAN_PERSONALITY: Record<string, { zh: string; en: string }> = {
   },
 };
 
-const WUXING_ADVICE: Record<string, { career: string; careerEn: string; love: string; loveEn: string; health: string; healthEn: string; advice: string; adviceEn: string }> = {
+const WUXING_ADVICE: Record<string, { zh: string; en: string; love: string; loveEn: string; health: string; healthEn: string; advice: string; adviceEn: string }> = {
   '木旺': {
     zh: '木旺之人适合从事创意、教育、文化、设计等行业。事业上宜把握春季良机，多与东方合作。注意避免与金属性行业冲突，如金融、机械等。',
     en: 'Those with strong Wood energy excel in creative, educational, cultural, and design fields. Seize opportunities in spring and seek partnerships in the east. Avoid Metal-dominated industries such as finance and machinery.',
@@ -129,8 +129,8 @@ export function generateDetailedReading(
   return {
     personality: p.zh,
     personalityEn: p.en,
-    career: a.career,
-    careerEn: a.careerEn,
+    career: a.zh,
+    careerEn: a.en,
     love: a.love,
     loveEn: a.loveEn,
     health: a.health,

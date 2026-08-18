@@ -144,8 +144,7 @@ const subtitleVariants = {
 };
 
 export default function Home() {
-  const { t, i18n } = useTranslation();
-  const isZh = i18n.language === 'zh';
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (

@@ -171,7 +171,7 @@ function ScrollReveal({ children, isVisible }: { children: React.ReactNode; isVi
   );
 }
 
-function calculateBazi(dateStr: string, hour: number, lunarPrefix: string): BaziResult & { lunarDate: string; reading: { personality: string; career: string; love: string; health: string; advice: string } } {
+function calculateBazi(dateStr: string, hour: number, lunarPrefix: string): BaziResult {
   const date = new Date(dateStr);
   const year = date.getFullYear();
   const month = date.getMonth() + 1;

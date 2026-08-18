@@ -61,7 +61,7 @@ function getSuitSymbol(suit?: string) {
 }
 
 // ─── Tarot Card Face with Real Image ───
-export default function TarotCardFace({ cardId, name, nameEn, className = '' }: TarotCardFaceProps) {
+export default function TarotCardFace({ cardId, name, className = '' }: TarotCardFaceProps) {
   const isMajor = cardId <= 21;
   const suit = isMajor ? undefined : (cardId <= 35 ? 'wands' : cardId <= 49 ? 'cups' : cardId <= 63 ? 'swords' : 'pentacles');
   const theme = getTheme(cardId, suit);
