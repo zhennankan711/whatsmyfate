@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import LanguageToggle from './components/LanguageToggle';
 import SEO from './components/SEO';
 import Home from './pages/Home';
@@ -67,6 +68,7 @@ export default function App() {
       <div className="relative min-h-[100dvh] overflow-x-hidden">
         <LanguageToggle />
         <AnimatedRoutes />
+        <Analytics />
       </div>
     </BrowserRouter>
   );
